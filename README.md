@@ -34,6 +34,5 @@ export OPENSSL_CONF=/opt/openssl-3.5/ssl/openssl-pqc.cnf
 # Run client (another terminal)
 export LD_LIBRARY_PATH=/opt/openssl-3.5/lib64:$LD_LIBRARY_PATH
 export OPENSSL_CONF=/opt/openssl-3.5/ssl/openssl-pqc.cnf
-./src/hybrid_client# Hybrid PQC TLS - X25519 + ML-KEM-768
-
+./src/hybrid_client
 
