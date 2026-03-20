@@ -101,34 +101,6 @@ sudo tcpdump -i lo -w capture.pcap port 4433
 Run the server and client, then analyze with:
 tshark -r capture.pcap -Y "tls.handshake.type == 1" -V | grep -A10 "supported_groups"
 
-## File Structure
-
-Hybrid-PQC-TLS/
-├── README.md
-├── LICENSE
-├── NOTICE
-├── .gitignore
-├── src/
-│   ├── hybrid_server.c
-│   ├── hybrid_client.c
-│   └── Makefile
-├── scripts/
-│   ├── setup-openssl.sh
-│   ├── generate-certs.sh
-│   ├── run-server.sh
-│   ├── run-client.sh
-│   ├── capture-handshake.sh
-│   ├── analyze-handshake.sh
-├── certs/
-│   ├── ca.crt
-│   ├── server.crt
-│   └── README.md
-├── docs/
-│   ├── architecture.md
-├── logs/
-│   └── hybrid_handshake.log
-└── captures/
-
 ## ANSSI Compliance
 
 This implementation follows ANSSI February 2026 guidance:
