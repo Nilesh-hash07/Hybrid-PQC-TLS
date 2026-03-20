@@ -1,0 +1,234 @@
+# ============================================
+# Hybrid PQC TLS - .gitignore
+# ============================================
+
+# ----------------------------
+# Compiled Binaries
+# ----------------------------
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+hybrid_server
+hybrid_client
+src/hybrid_server
+src/hybrid_client
+
+# ----------------------------
+# Build Artifacts
+# ----------------------------
+build/
+cmake-build-*/
+*.a
+*.la
+*.lo
+.deps/
+.dirstamp
+*.d
+Makefile.in
+Makefile.am
+config.status
+config.log
+config.h
+config.h.in
+stamp-h1
+
+# ----------------------------
+# Private Keys - Critical Security
+# ----------------------------
+*.key
+*.pem
+*.priv
+*.private
+*.p12
+*.pfx
+*.csr
+*.srl
+*.crt.key
+certs/*.key
+certs/*.csr
+certs/*.srl
+certs/*.pem
+certs/*.priv
+certs/*.p12
+ssl/*.key
+ssl/*.pem
+
+# ----------------------------
+# Public Certificates (Optional - but better to generate)
+# ----------------------------
+# Uncomment if you prefer users generate their own certs
+# certs/*.crt
+# *.crt
+
+# ----------------------------
+# Logs and Capture Files
+# ----------------------------
+*.log
+*.pcap
+*.pcapng
+*.cap
+logs/
+captures/
+hybrid_handshake.log
+server.log
+client.log
+test.log
+*.out
+
+# ----------------------------
+# Temporary Files
+# ----------------------------
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+*.orig
+*.rej
+
+# ----------------------------
+# Environment and Configuration
+# ----------------------------
+.env
+.env.*
+*.env
+*.conf
+*.cnf
+*.cfg
+!openssl-pqc.cnf.template
+openssl-*.cnf
+local.cnf
+/opt/openssl-3.5/
+
+# ----------------------------
+# IDE and Editor Files
+# ----------------------------
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.cproject
+.metadata/
+.workspace
+.DS_Store
+Thumbs.db
+*.suo
+*.user
+*.sln
+*.csproj
+
+# ----------------------------
+# Version Control
+# ----------------------------
+.git/
+.gitignore
+.gitattributes
+.gitmodules
+.svn/
+.hg/
+.bzr/
+
+# ----------------------------
+# Python and Scripts (if any)
+# ----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+venv/
+env/
+.venv/
+*.egg-info/
+
+# ----------------------------
+# Documentation Builds
+# ----------------------------
+docs/_build/
+docs/.build/
+site/
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+
+# ----------------------------
+# Dependency Builds
+# ----------------------------
+liboqs/
+oqs-provider/
+openssl-*/
+openssl-*.tar.gz
+*-provider/
+*-build/
+
+# ----------------------------
+# Test Artifacts
+# ----------------------------
+test/
+tests/
+*.test
+coverage/
+*.gcov
+*.gcda
+*.gcno
+
+# ----------------------------
+# Packaging
+# ----------------------------
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rpm
+*.deb
+dist/
+wheel/
+*.egg
+
+# ----------------------------
+# System Files
+# ----------------------------
+.directory
+.downloads
+.cache/
+.local/
+.config/
+.bash_history
+.zsh_history
+
+# ----------------------------
+# Project Specific
+# ----------------------------
+# Never commit private keys
+certs/*.key
+certs/*.csr
+certs/*.srl
+certs/*.pem
+
+captures/
+*.pcap
+
+# Logs contain machine-specific information
+logs/
+*.log
+
+# Build output is generated
+hybrid_server
+hybrid_client
+src/hybrid_server
+src/hybrid_client
+
+# Environment setup script outputs
+*.sh.backup
