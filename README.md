@@ -86,13 +86,6 @@ Starting the Client:
 
 Expected client output shows loading providers, creating SSL context, offering hybrid groups, connecting to server, performing TLS handshake, and displaying connection details including protocol TLSv1.3, cipher TLS_AES_256_GCM_SHA384, key exchange X25519MLKEM768 with NID 16781804/0x10011EC, and HYBRID ACTIVE status.
 
-## Testing
-
-Automated Test Script:
-./scripts/test-all.sh
-
-This script verifies certificates exist, builds the project, starts the server in background, runs the client, checks for successful hybrid handshake, and cleans up processes.
-
 ## Wireshark Capture
 
 To capture the hybrid handshake for verification:
